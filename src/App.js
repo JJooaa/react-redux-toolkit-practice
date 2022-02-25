@@ -1,13 +1,16 @@
 import "./App.scss";
 import React, { useState } from "react";
-import CounterPage from "./counterPage";
-import PlaceholderPage from "./placeholderPage";
+import CounterPage from "./pages/counterPage";
+import PlaceholderPage from "./pages/placeholderPage";
+import { useSelector } from "react-redux";
+
 function App() {
-    const [page, setPage] = useState("pc");
+    const page = useSelector((state) => state.page.value);
+
     return (
         <div className="App">
-            {page === "counter" ? <CounterPage /> : null}
-            {page === "pc" ? <PlaceholderPage /> : null}
+            {page === "counter-page" ? <CounterPage /> : null}
+            {page === "placeholder-page" ? <PlaceholderPage /> : null}
         </div>
     );
 }

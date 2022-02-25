@@ -1,0 +1,12 @@
+button {
+    width: auto;
+    height: 40px;
+    border-radius: 7px;
+    background: lightblue;
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+    &:hover {
+        background: tomato;
+    }
+}
